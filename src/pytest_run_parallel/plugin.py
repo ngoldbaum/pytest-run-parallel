@@ -34,11 +34,9 @@ def pytest_addoption(parser):
     )
     parser.addoption(
         "--skip-thread-unsafe",
-        action="store",
+        action="store_true",
         dest="skip_thread_unsafe",
         help="Whether to skip running thread-unsafe tests",
-        type=bool,
-        default=False,
     )
     parser.addini(
         "thread_unsafe_fixtures",
